@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ControlVolumenFinal</string>
+    <string name="action_bar_title">Control de volumen</string>
+
+    <string-array name="volumenes_array">
+        <item>40 dBA - Habitación en silencio</item>
+        <item>50 dBA - Cocina</item>
+        <item>60 dBA - Conversación normal, cena</item>
+        <item>70 dBA - Reunión, fiesta</item>
+    </string-array>
+
+    <string-array name="volumenes_valores_array">
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.alejandro.controlvolumenfinal.main.MainActivity">
+
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/space"
+        android:id="@+id/toggleButton"
+        android:onClick="onStartClick"/>
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggleButton"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Volumen deseado:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:id="@+id/textVolumen"
+        android:layout_below="@+id/space"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_volumen"
+        android:id="@+id/imageVolumen"
+        android:layout_below="@+id/textVolumen"
+        />
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/imageVolumen"/>
+
+    <TextView
+        android:text="Modelo de televisor:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textModelo"
+        android:layout_below="@+id/space2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="18dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_modelo_tv"
+        android:id="@+id/imageModelo"
+        android:layout_below="@+id/textModelo"
+        android:layout_alignParentStart="true" />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerModelo"
+        android:layout_alignBottom="@+id/imageModelo"
+        android:layout_toEndOf="@+id/imageModelo" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerVolumen"
+        android:entries="@array/volumenes_array"
+        android:layout_alignBottom="@+id/imageVolumen"
+        android:layout_toEndOf="@+id/imageVolumen" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageModelo"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp"
+        android:id="@+id/textView"
+        android:text="Volumen actual:" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/space" />
+
+    <TextView
+        android:text="0 "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/space3"
+        android:id="@+id/volumenActual" />
+
+    <TextView
+        android:text="db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_toEndOf="@+id/imageModelo" />
+
+
+</RelativeLayout>
